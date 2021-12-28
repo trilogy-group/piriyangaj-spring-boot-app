@@ -1,5 +1,5 @@
 # Use an official OpenJDK runtime as a parent image
-FROM public.ecr.aws/docker/library/openjdk:latest
+FROM public.ecr.aws/conekta/openjdk:8-alpine
 
 # set shell to bash
 # source: https://stackoverflow.com/a/40944512/3128926
