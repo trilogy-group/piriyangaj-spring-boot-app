@@ -4,8 +4,8 @@ navigator:
     email: import.automation@aurea.com
 repo:
     companyName: Aurea
-    productName: iacoreteam
-    repoUrl: https://github.com/trilogy-group/dh-examplar-deployable-service-k8s
+    productName: iacoreteampiriyanga
+    repoUrl: https://github.com/trilogy-group/piriyangaj-spring-boot-app
     repoType: Deployable service
     githubTokenSecretId: devhub-import/env/xohub/githubToken/dev
     branch: master
@@ -15,13 +15,12 @@ build:
     os: ubuntu-16.04
     image: maven:3.6.3-jdk-11
     toolchainVersion: ""
-    tool: Maven 3
+    tool: ""
     buildCommand: mvn compile
 test:
     utFramework: JUnit
     testCommand: mvn test
 package:
-    packageTool: Maven 3
     packageCommand: mvn package
     artifactDir: ./target
     artifactUploadCommand: mvn deploy
@@ -52,6 +51,18 @@ envs:
           kind: secret
           value: devhub-import/env/SECRET_TEST_CR105/dev
     - name: dev
+      default: false
+      vars:
+        - key: DB_PASSWORD
+          kind: secret
+          value: devhub-import/env/SECRET_TEST_CR105/dev
+    - name: staging
+      default: false
+      vars:
+        - key: DB_PASSWORD
+          kind: secret
+          value: devhub-import/env/SECRET_TEST_CR105/dev
+    - name: prod
       default: false
       vars:
         - key: DB_PASSWORD
