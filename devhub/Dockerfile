@@ -1,9 +1,9 @@
 # Use an official OpenJDK runtime as a parent image
-FROM public.ecr.aws/conekta/openjdk:8-alpine
+FROM public.ecr.aws/g0p9z9q3/openjdk:8-jdk-alpine
 
 # set shell to bash
 # source: https://stackoverflow.com/a/40944512/3128926
-RUN apt-get update && apt-get add bash
+RUN apk update && apk add bash
 
 # Set the working directory to /app
 WORKDIR /app
