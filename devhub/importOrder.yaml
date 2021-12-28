@@ -15,13 +15,12 @@ build:
     os: ubuntu-16.04
     image: maven:3.6.3-jdk-11
     toolchainVersion: ""
-    tool: Maven 3
+    tool: ""
     buildCommand: mvn compile
 test:
     utFramework: JUnit
     testCommand: mvn test
 package:
-    packageTool: Maven 3
     packageCommand: mvn package
     artifactDir: ./target
     artifactUploadCommand: mvn deploy
