@@ -13,7 +13,7 @@ buildDeps: []
 build:
     techStack: Java
     os: ubuntu-16.04
-    image: maven:3.6.3-jdk-11
+    image: public.ecr.aws/docker/library/openjdk:latest
     toolchainVersion: ""
     tool: Maven 3
     buildCommand: mvn compile

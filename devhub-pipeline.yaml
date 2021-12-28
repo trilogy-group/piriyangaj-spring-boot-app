@@ -2,7 +2,7 @@ version: v1
 productName: iacoreteampiriyanga
 buildEnvVars: []
 build:
-    image: maven:3.6.3-jdk-11
+    image: public.ecr.aws/docker/library/openjdk:latest
     platform: linux
     preBuildCommand: echo 'Pre build command is empty'
     buildCommand: mvn compile
