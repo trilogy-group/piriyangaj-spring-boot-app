@@ -3,7 +3,7 @@ FROM public.ecr.aws/docker/library/openjdk:latest
 
 # set shell to bash
 # source: https://stackoverflow.com/a/40944512/3128926
-RUN apk update && apk add bash
+RUN apt-get update && apt-get add bash
 
 # Set the working directory to /app
 WORKDIR /app
